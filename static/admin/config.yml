@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: static/images
+public_folder: ../../static/images/
+
+collection:
+ - name: "title-image-descriptions"
+   preview: false
+   label: "Title Image Description"
+   folder: "content/title-image-descriptions"
+   create: true
+   slug: "{{slug}}"
+   fields:
+     - { label: "Title", name: "title", widget: "string" }
+     - { label: "Description", name: "description", widget: "markdown" }
+     - { label: "FeaturedImage", name: "featuredImage", widget: image }
